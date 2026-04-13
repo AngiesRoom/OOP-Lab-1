@@ -7,7 +7,7 @@ public class Main {
         sedan.displayInfo();
 
         System.out.println("\n========== Method Overriding ==========");
-        // Calls Sedan's version of accelerate() — OVERRIDES Vehicle's abstract method
+        
         sedan.accelerate(100);
 
         System.out.println("\n========== Method Overloading ==========");
