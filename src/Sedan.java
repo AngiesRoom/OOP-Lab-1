@@ -15,7 +15,7 @@ public class Sedan extends Vehicle implements Automobile {
         @Override
         public void accelerate(double speed) {
             fuelLevel -= speed * 0.05;
-            System.out.println(make + " accelerates to " + speed + " km/h  ⛽ " + fuelLevel + "%");
+            System.out.println(make + " accelerates to " + speed + " km/h   " + fuelLevel + "%");
         }
 
         @Override
