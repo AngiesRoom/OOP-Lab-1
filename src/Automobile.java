@@ -1,11 +1,9 @@
 public interface Automobile {
 
 
-    int    DEFAULT_DOORS= 4;
-    double MAX_FUEL    = 100.0;
 
+    public void displayMaxSpeed();
+    public void displayDoors();
+    public void displayEngineSize();
 
-    void   accelerate(double speed);
-    void   brake();
-    String getInfo();
 }
