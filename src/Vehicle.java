@@ -1,17 +1,20 @@
 public abstract class Vehicle {
-    public String make;
+    public String name;
     public int year;
 
-    public Vehicle(String make, int year) {
-        this.make = make;
+    public Vehicle(String name, int year){
+        this.name = name;
         this.year = year;
     }
-
-    public abstract void accelerate(double speed);
-    public abstract void stop();
-    public abstract double gas();
-
-    public void displayInfo() {
-        System.out.println("Vehicle: " + year + " " + make);
+    public void getDetails(){
+        System.out.println(year + " " + name);
     }
+
+
+
+    public abstract void accelerate(int speed);
+
+    public abstract void stop();
+
+    public abstract void gas();
 }
