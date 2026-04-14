@@ -1,45 +1,45 @@
-public class Sedan extends Vehicle implements Automobile {
+public class Sedan extends Vehicle implements Automobile{
+    public int doors;
+    public int maxSpeed ;
+    public double engineSize;
 
-        public int    doors;
-        public double fuelLevel;
-        public boolean hasTrunk;
-
-        public Sedan(String make, int year) {
-            super(make, year);
-            this.doors     = DEFAULT_DOORS;
-            this.fuelLevel = MAX_FUEL;
-            this.hasTrunk  = true;
-        }
-
-
-        @Override
-        public void accelerate(double speed) {
-            fuelLevel -= speed * 0.05;
-            System.out.println(make + " accelerates to " + speed + " km/h   " + fuelLevel + "%");
-        }
-
-        @Override
-        public void stop() {
-            System.out.println(make + " has stopped.");
-        }
-
-        @Override
-        public double gas() {
-            return fuelLevel;
-        }
-
-
-        @Override
-        public void brake() {
-            System.out.println(make + " is braking smoothly.");
-        }
-
-        @Override
-        public String getInfo() {
-            return "Sedan: " + year + " " + make +
-                    " | Doors: " + doors +
-                    " | Trunk: " + hasTrunk +
-                    " | Fuel: " + fuelLevel + "%";
-        }
+    public Sedan(String name, int year, int doors, int maxSpeed, double engineSize){
+        super(name, year);
+        this.doors = doors;
+        this.maxSpeed = maxSpeed;
+        this.engineSize = engineSize;
     }
 
+    @Override
+    public void accelerate(int speed){
+        System.out.println("The " + name + " has accelerated by: " + speed + " km/hr");
+    }
+    public void accelerate(){
+        System.out.println("The vehicle has not accelerated");
+    }
+    @Override
+    public void stop(){
+        System.out.println("The " + name + " has stopped");
+    }
+    @Override
+    public void gas(){
+        System.out.println("Gas has been applied");
+    }
+    @Override
+    public void displayMaxSpeed(){
+        System.out.println("The max speed of the " + name + " is " + maxSpeed);
+    }
+    @Override
+    public void displayDoors(){
+        System.out.println("The number of doors is " + doors);
+    }
+    @Override
+    public void displayEngineSize(){
+        System.out.println("The engine size is " + engineSize);
+    }
+
+
+
+
+
+}
