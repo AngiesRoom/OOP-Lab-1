@@ -1,19 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-
-        Sedan sedan = new Sedan("Toyota", 2022);
-
-        System.out.println("========== Vehicle Info ==========");
-        sedan.displayInfo();
-
-        System.out.println("\n========== Method Overriding ==========");
+        Sedan sedan1 = new Sedan("Mercedes C200",2022,4,260,2.5);
+        sedan1.accelerate();
+        sedan1.accelerate(100);
+        sedan1.accelerate(90);
         
-        sedan.accelerate(100);
-
-        System.out.println("\n========== Method Overloading ==========");
-
-        sedan.accelerate(120);
-        sedan.accelerate(80);
-        sedan.accelerate(60);
+        
     }
 }
